@@ -2,7 +2,7 @@ import pytest
 from selene.support.shared import browser
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def window_expect_size():
     browser.open('https://demoqa.com/webtables')
     browser.config.window_width = 1260
